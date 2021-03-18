@@ -5,11 +5,16 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
-    "random-image-creator": "^2.0.2"
+    "random-image-creator": "^2.0.2",
+    "uglify-js": "^3.13.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --config=.eslintrc.js main.js",
+    "minify:js": "uglifyjs *.js -o dist/app.js"
   },
   "repository": {
     "type": "git",

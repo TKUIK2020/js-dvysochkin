@@ -1,5 +1,5 @@
 var http = require("http");
-var generateImage = require('random-image-creator')
+var generateImage = require("random-image-creator");
  
 http.createServer(function(request, response){
      
@@ -10,8 +10,8 @@ http.createServer(function(request, response){
     console.log("Все заголовки");
     console.log(request.headers);
     response.writeHead(200, {
-    'Content-Type': 'text/html'
-  })
+    "Content-Type": "text/html"
+  });
     const lad = generateImage(280,400);
      
     response.end("<img src='"+lad+"'>");
